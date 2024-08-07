@@ -306,6 +306,7 @@ data = [
 import art
 import random
 import pdb
+from replit import clear
 
 def choicepicks():
   print(art.logo)
@@ -343,10 +344,12 @@ def final_score(currentscore):
     choices=choicepicks()
     if (choices[2]== "A" and choices[0]>choices[1]):
       currentscore+=1
+      clear()
       print(f"You're right! Current score: {currentscore}")
       final_score(currentscore)
     elif (choices[2]== "B" and choices[1]>choices[0]):
       currentscore+=1
+      clear()
       print(f"You're right! Current score: {currentscore}")
       final_score(currentscore)
     elif (choices[2]=="A" and choices[1]>choices[0]):
